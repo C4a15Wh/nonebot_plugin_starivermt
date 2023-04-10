@@ -58,7 +58,7 @@ async def _(bot: Bot, event: Event, state: T_State, msg: str = ArgPlainText()):
         elif msg == "True":
             MODULE_STATUS[module] = True
         else:
-            admin.finish("错误的输入值{}".format(msg))
+            await admin.finish("错误的输入值{}".format(msg))
     
         
         await admin.finish("{module}目前的状态已调整为{stat}".format(module=module, stat=str(MODULE_STATUS[module])))
